@@ -1,0 +1,12 @@
+    {  
+        "server": "10.1.1.8",
+        "userName": "windows_user",
+	"domain": "My_domain",
+        "password": "windows_user",
+        "options": {
+            "database": "users_db",
+            "encrypt": false
+        }
+    }  
+  
+
