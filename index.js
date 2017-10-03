@@ -53,7 +53,7 @@ ilx.addMethod('sql', function(username, response) {
             }  
 
     }).fail(function(err){
-            // MySQL query failed for some reason, so send a null response back to the Tcl iRule  
+            // MSSQL query failed for some reason, so send a null response back to the Tcl iRule  
             if (debug >= 1) {console.error('Error with query: ' + err.stack);}  
             response.reply('');  
             return;  
