@@ -25,16 +25,6 @@ ilx.addMethod('sql', function(username, response) {
     var TYPES = require('tedious-promises/node_modules/tedious').TYPES;
     tp.setConnectionConfig(dbConfig);
 
-   /* const config = {  
-        "server": '10.1.1.8',
-        "userName": 'user',
-        "domain": 'ITC',
-        "password": 'user',
-        "options": {
-            "database": 'users_db',
-            "encrypt": false
-        }
-    };*/  
   
     // Connect to the MySQL server  
     // Perform the query. Escape the user-input using mysql.escape: https://www.npmjs.com/package/mysql#escaping-query-values  
