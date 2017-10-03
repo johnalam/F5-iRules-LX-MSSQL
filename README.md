@@ -28,11 +28,16 @@ To install this example on the BigIP with TMOS version 12.1 or above do the foll
  
 
      Note: you will need to click the "Reload from Workspace" in these cases:
-
-    Any time you make a change to the wrokspace.
-    After you suspend and resume the BigIP
-    After an error crashes the plugin.
+       Any time you make a change to the wrokspace.
+       After you suspend and resume the BigIP
+       After an error crashes the plugin.
 
  
+The demo receives a username and return a group affiliation from the database records.
 
-To test your install, browse to the IP address of your virtual.  If prompted to enter a username, enter user1 or user2 , or user3.  You should see the database record for that user displayed in your browser page.
+To test your install using LTM only, attach the irule named "mssql.tcl" to the virtual server. Browse to the IP address of your virtual.  If prompted to enter a username, enter user1 or user2 , or user3.  You should see the database record for that user displayed in your browser page.
+
+When testing with APM, use the iRule named "mssql-apm" and add an event in the VPE policy.  The event is ACCESS_POLICY_AGENT_EVENT.  This policy event will triger the irule.  Rather than displaying the results in the browser, the irule returns an APM variable which you can use in subsequest Agents within the VPE.  Here is the variable name: session.logon.last.group.
+
+
+
