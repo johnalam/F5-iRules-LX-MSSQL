@@ -19,7 +19,7 @@ To install this example on the BigIP with TMOS version 12.1 or above do the foll
             cd /var/ilx/workspaces/Common/mssql/extensions/mssql-xt
                 Note:  this will do the same this:  cd /var/ilx/w<tab>/C<tab>/m<tab>/e<tab>/m<tab>
             npm install --save tedious-promisses
-    5) Edit the content of the 'index.js' file and change the username, password, domain and server IP address.
+    5) Edit the content of the 'config.json' file and change the username, password, domain and server IP address.
     6) Create an iRules-LX plugin and bind it to the workspace.
         Note: if you imported in step 3, the workspace name is "mssql-tedious-prom".  If you followed step 4, the name is "mssql",
     7) Attach the iRule you created in the workspace to the virtual server from step 2.
