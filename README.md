@@ -7,23 +7,23 @@ To install this example on the BigIP with TMOS version 12.1 or above do the foll
 
  
 
-    Provision iRules-LX.
-    Create an HTTP virtual
-    Import the workspace attached and skip to step 5.  (Recommended).
-    If you prefer to create your own workspace perform these steps:
-        Create a workspace and name it "mssql".  This name corresponds to command in step e-i. 
-        Create an iRule in the workspace and paste in the iRule provided.  (Pull it out of the worspace tar file attached).
-        Create an extension in the workspace and name it 'mssql-xt' so that it corresponds to the TCL iRule provided.
-        Replace the contents of the 'index.js' under the extension with the code in index.js file provided. (Pull it out of the worspace tar file attached)
-        Connect to the BigIP CLI and enter the following commands, your BigIP must have internet connectivity:
+    1) Provision iRules-LX.
+    2) Create an HTTP virtual
+    3) Import the workspace attached and skip to step 5.  (Recommended).
+    4) If you prefer to create your own workspace perform these steps:
+        a- Create a workspace and name it "mssql".  This name corresponds to command in step e-i. 
+        b- Create an iRule in the workspace and paste in the iRule provided.  (Pull it out of the worspace tar file attached).
+        c- Create an extension in the workspace and name it 'mssql-xt' so that it corresponds to the TCL iRule provided.
+        d- Replace the contents of the 'index.js' under the extension with the code in index.js file provided. (Pull it out of the worspace tar file attached)
+        e- Connect to the BigIP CLI and enter the following commands, your BigIP must have internet connectivity:
             cd /var/ilx/workspaces/Common/mssql/extensions/mssql-xt
                 Note:  this will do the same this:  cd /var/ilx/w<tab>/C<tab>/m<tab>/e<tab>/m<tab>
             npm install --save tedious-promisses
-    Edit the content of the 'index.js' file and change the username, password, domain and server IP address.
-    Create an iRules-LX plugin and bind it to the workspace.
+    5) Edit the content of the 'index.js' file and change the username, password, domain and server IP address.
+    6) Create an iRules-LX plugin and bind it to the workspace.
         Note: if you imported in step 3, the workspace name is "mssql-tedious-prom".  If you followed step 4, the name is "mssql",
-    Attach the iRule you created in the workspace to the virtual server from step 2.
-    Go back to the workspace and verify that the plugin status indicator is GREEN.  If it is not GREEN, click on the "Reload from Workspace" button.
+    7) Attach the iRule you created in the workspace to the virtual server from step 2.
+    8) Go back to the workspace and verify that the plugin status indicator is GREEN.  If it is not GREEN, click on the "Reload from Workspace" button.
 
  
 
