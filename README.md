@@ -9,7 +9,7 @@ To install this example on the BigIP with TMOS version 12.1 or above do the foll
 
     1) Provision iRules-LX.
     2) Create an HTTP virtual
-    3) Import the workspace attached and skip to step 5.  (Recommended).
+    3) Import the workspace attached and skip to step 5.  (Recommended). (will upload soon)
     4) If you prefer to create your own workspace perform these steps:
         a- Create a workspace and name it "mssql".  This name corresponds to command in step e-i. 
         b- Create an iRule in the workspace and paste in the iRule provided.  (Pull it out of the worspace tar file attached).
