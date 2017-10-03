@@ -1,7 +1,7 @@
 /* ###################################### */  
 /* index.js counterpart for mssql_irulelx */  
 /* THis version uses tedious-promises. */
-  
+ 
 /* Log debug to /var/log/ltm? 0=none, 1=errors only, 2=verbose */  
 var debug = 2;  
 if (debug >= 2) {console.log('Running index.js');}  
